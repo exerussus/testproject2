@@ -5,6 +5,7 @@ public class RigidBodyCinematicSwitcher : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody[] _rigidBodies;
+    [SerializeField] private Collider[] _colliders;
     [SerializeField] private bool isKinematicOnStart = false;
 
     private void Awake()
@@ -19,6 +20,10 @@ public class RigidBodyCinematicSwitcher : MonoBehaviour
         {
             rigidBody.isKinematic = false;
         }
+        foreach (var collider in _colliders)
+        {
+            collider.isTrigger = false;
+        }
     }
 
     public void SetKinematic()
@@ -27,6 +32,10 @@ public class RigidBodyCinematicSwitcher : MonoBehaviour
         foreach (var rigidBody in _rigidBodies)
         {
             rigidBody.isKinematic = true;
+        }
+        foreach (var collider in _colliders)
+        {
+            collider.isTrigger = true;
         }
     }
 }
