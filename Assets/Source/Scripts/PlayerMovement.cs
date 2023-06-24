@@ -4,12 +4,22 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private KeyListener _keyListener;
 
-    private void FixedUpdate()
+    private void OnEnable()
     {
-        var horizontalAxis = Input.GetAxis("Horizontal");
-        var verticalAxis = Input.GetAxis("Vertical");
-        
+        _keyListener.OnAxisChange += Move;
+    }
+
+    private void OnDisable()
+    {
+        _keyListener.OnAxisChange -= Move;
+    }
+
+
+    private void Move(float verticalAxis, float horizontalAxis)
+    {
+
         var directionVector = new Vector3(verticalAxis, 0, horizontalAxis);
         var fixedDirectionVector = Vector3.ClampMagnitude(directionVector, 1);
         
