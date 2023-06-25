@@ -13,6 +13,7 @@ namespace Source.Scripts.Ragdoll
         private void Awake()
         {
             if (isKinematicOnStart) DisableRagdoll();
+            else _animator.enabled = false;
         }
 
         public void EnableRagdoll()

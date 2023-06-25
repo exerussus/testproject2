@@ -1,16 +1,29 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
 namespace Source.Scripts.Animations
 {
     public abstract class AnimationParametersSetter : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
-        
-        protected abstract void SetAnimationsValues(Animator animator);
 
-        public void SetAnimation()
+        [SerializeField] private KeyListener.PlayerKeyListener _playerKeyListener;
+
+        private void OnEnable()
         {
-            SetAnimationsValues(_animator);
+            _playerKeyListener.OnAxisChange += SetAnimation;
+        }
+
+        private void OnDisable()
+        {
+            _playerKeyListener.OnAxisChange -= SetAnimation;
+        }
+
+        protected abstract void SetAnimationsParameters(Animator animator, float axisV, float axisH);
+
+        private void SetAnimation(float axisV, float axisH)
+        {
+            SetAnimationsParameters(_animator, axisV, axisH);
         }
     }
 }

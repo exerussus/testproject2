@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Source.Scripts.KeyListener
 {
-    public class PlayerKeyListener : global::Source.Scripts.KeyListener.KeyListener
+    public class PlayerKeyListener : KeyListener
     {
         protected override float AxisV()
         {
