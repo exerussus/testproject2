@@ -1,15 +1,18 @@
 
 using UnityEngine;
 
-public class PlayerKeyListener : KeyListener
+namespace Source.Scripts.KeyListener
 {
-    protected override float AxisV()
+    public class PlayerKeyListener : global::Source.Scripts.KeyListener.KeyListener
     {
-        return Input.GetAxis("Vertical");
-    }
+        protected override float AxisV()
+        {
+            return Input.GetAxis("Vertical");
+        }
 
-    protected override float AxisH()
-    {
-        return Input.GetAxis("Horizontal");
+        protected override float AxisH()
+        {
+            return Input.GetAxis("Horizontal");
+        }
     }
 }
