@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private KeyListener _keyListener;
@@ -15,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _keyListener.OnAxisChange -= Move;
     }
-
-
+    
     private void Move(float verticalAxis, float horizontalAxis)
     {
 
