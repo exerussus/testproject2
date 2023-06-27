@@ -1,13 +1,20 @@
 ﻿
+
 using UnityEngine;
 
 namespace Source.Scripts.Animations
 {
+    [RequireComponent(typeof(KeyListener.KeyListener), typeof(Animator))]
     public abstract class AnimationParametersSetter : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
+        private Animator _animator;
+        private KeyListener.KeyListener _playerKeyListener;
 
-        [SerializeField] private KeyListener.PlayerKeyListener _playerKeyListener;
+        private void OnValidate()
+        {
+            _animator = GetComponent<Animator>();
+            _playerKeyListener = GetComponent<KeyListener.KeyListener>();
+        }
 
         private void OnEnable()
         {
@@ -19,11 +26,11 @@ namespace Source.Scripts.Animations
             _playerKeyListener.OnAxisChange -= SetAnimation;
         }
 
-        protected abstract void SetAnimationsParameters(Animator animator, float axisV, float axisH);
+        protected abstract void SetAnimationsParameters(Animator animator, float axisV, float axisH, bool isSpeedModeOn);
 
-        private void SetAnimation(float axisV, float axisH)
+        private void SetAnimation(float axisV, float axisH, bool isSpeedModeOn)
         {
-            SetAnimationsParameters(_animator, axisV, axisH);
+            SetAnimationsParameters(_animator, axisV, axisH, isSpeedModeOn);
         }
     }
 }
