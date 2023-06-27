@@ -24,7 +24,6 @@ namespace Source.Scripts.Weapon
         
         public void Shoot()
         {
-            Debug.Log("Shoot");
             Instantiate(_particleFlash, _particleFlashPlace.transform.position, _particleFlashPlace.transform.rotation);
             
             RaycastHit hitInfo;
