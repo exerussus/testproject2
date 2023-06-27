@@ -1,8 +1,9 @@
-﻿using System;
+﻿
 using UnityEngine;
 
 namespace Source.Scripts.Weapon
 {
+    [RequireComponent(typeof(WeaponKeyListener))]
     public class WeaponSound : MonoBehaviour
     {
         [SerializeField] private AudioSource _audioSource;
