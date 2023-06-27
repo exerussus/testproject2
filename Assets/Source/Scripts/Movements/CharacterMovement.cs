@@ -12,11 +12,6 @@ namespace Source.Scripts.Movements
         private float _currentAxisH;
         private float _currentAxisV;
 
-        private void Start()
-        {
-            Cursor.visible = false;
-        }
-
         protected override void Move(float verticalAxis, float horizontalAxis, bool isSpeedModeOn)
         {
             _currentAxisH = GradualChanger.GetGradualChange(_currentAxisH, horizontalAxis, 
