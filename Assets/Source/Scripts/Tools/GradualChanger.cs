@@ -13,12 +13,18 @@ namespace Source.Scripts.Tools
             if (currentValue < targetValue)
             {
                 if (currentValue + Time.fixedDeltaTime * increaseMultiply <= targetValue)
+                {
+                    if (currentValue * 2 < targetValue) increaseMultiply *= 2;
                     return currentValue + Time.fixedDeltaTime * increaseMultiply;
+                }
             }
             if (currentValue > targetValue)
             {
                 if (currentValue - Time.fixedDeltaTime * decreaseMultiply >= targetValue)
+                {
+                    if (currentValue * 2 > targetValue) decreaseMultiply *= 2;
                     return currentValue - Time.fixedDeltaTime * decreaseMultiply;
+                }
             }
             return targetValue;
         }

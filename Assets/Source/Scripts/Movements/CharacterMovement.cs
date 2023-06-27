@@ -27,11 +27,16 @@ namespace Source.Scripts.Movements
                 increaseMultiply: 2f);
             
             var directionVector = new Vector3(_currentAxisV, 0, _currentAxisH);
-            var fixedDirectionVector = Vector3.ClampMagnitude(directionVector, 1);
+            var fixedDirectionValue = Vector3.ClampMagnitude(directionVector, 1).magnitude;
 
+            if (isSpeedModeOn)
+                fixedDirectionValue = fixedDirectionValue / PlayerSettings.StandardSpeed * PlayerSettings.SpeedMode;
+
+            _currentSpeedDirection = GradualChanger.GetGradualChange(_currentSpeedDirection, fixedDirectionValue);
+            
             _animator.SetFloat(Parameters.AxisH, _currentAxisH);
             _animator.SetFloat(Parameters.AxisV, _currentAxisV);
-            _animator.SetFloat(Parameters.MovementSpeed, fixedDirectionVector.magnitude);
+            _animator.SetFloat(Parameters.MovementSpeed, _currentSpeedDirection);
         }
 
         protected override void Rotate(float mouseAxisX)
