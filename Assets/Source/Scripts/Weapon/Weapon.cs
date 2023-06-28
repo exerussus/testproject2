@@ -7,6 +7,7 @@ namespace Source.Scripts.Weapon
     public class Weapon : MonoBehaviour
     {
         [SerializeField] private float _range = 100f;
+        [SerializeField] private float _damage = 35f;
         [SerializeField] private Camera _camera;
         [SerializeField] private GameObject _particleFlash;
         [SerializeField] private GameObject _particleFlashPlace;
@@ -32,7 +33,7 @@ namespace Source.Scripts.Weapon
                 Target target = hitInfo.transform.GetComponent<Target>();
                 if (target != null)
                 {
-                    target.TakeDamage();
+                    target.TakeDamage(_damage);
                 }
             }
         }
