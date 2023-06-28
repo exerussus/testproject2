@@ -1290,6 +1290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006628fd96fb4c1ab803dea46748d690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementSensitivity: 1.2
+  _rotationSensitivity: 1
+  _movementJoystick: {fileID: 0}
+  _rotationJoystick: {fileID: 0}
+  _runButton: {fileID: 0}
 --- !u!114 &2848354818304641798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215bb9ceca894ec7a7d687c9db99f2d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fireButton: {fileID: 0}
 --- !u!114 &6545352558576909984
 MonoBehaviour:
   m_ObjectHideFlags: 0
