@@ -2811,7 +2811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 40
-  _camera: {fileID: 0}
+  _targetTransform: {fileID: 0}
 --- !u!1 &7397268261497191760
 GameObject:
   m_ObjectHideFlags: 0

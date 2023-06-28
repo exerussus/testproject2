@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbodyCinematicSwitcher: {fileID: 1589970659815734908}
   _delayDestroy: 3
-  _health: 100
+  _health: 90
 --- !u!114 &8091158547393964965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 30
-  _camera: {fileID: 0}
+  _targetTransform: {fileID: 0}
 --- !u!1 &4194082656329171334
 GameObject:
   m_ObjectHideFlags: 0
