@@ -1295,6 +1295,7 @@ MonoBehaviour:
   _movementJoystick: {fileID: 0}
   _rotationJoystick: {fileID: 0}
   _runButton: {fileID: 0}
+  _jumpButton: {fileID: 0}
 --- !u!114 &2848354818304641798
 MonoBehaviour:
   m_ObjectHideFlags: 0
