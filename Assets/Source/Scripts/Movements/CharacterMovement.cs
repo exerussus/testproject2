@@ -33,10 +33,15 @@ namespace Source.Scripts.Movements
             _animator.SetFloat(Parameters.AxisV, _currentAxisV);
             _animator.SetFloat(Parameters.MovementSpeed, _currentSpeedDirection);
         }
-
+        
         protected override void Rotate(float mouseAxisX)
         {
             transform.Rotate(0, mouseAxisX, 0);
+        }
+
+        protected override void Jump()
+        {
+            _animator.SetTrigger(Parameters.Jump);
         }
     }
 }

@@ -1562,7 +1562,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622682030}
-  m_LocalRotation: {x: 0.022194484, y: 0.044499096, z: -0.0009888584, w: 0.99876237}
+  m_LocalRotation: {x: 0.022194482, y: 0.044499096, z: -0.0009888583, w: 0.99876237}
   m_LocalPosition: {x: 0.11, y: 1.87, z: -15.599999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2492,7 +2492,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949166919}
-  m_LocalRotation: {x: 0.022194484, y: 0.044499096, z: -0.0009888584, w: 0.99876237}
+  m_LocalRotation: {x: 0.022194482, y: 0.044499096, z: -0.0009888583, w: 0.99876237}
   m_LocalPosition: {x: 0.11, y: 1.87, z: -15.599999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2808,6 +2808,10 @@ PrefabInstance:
       propertyPath: _runButton
       value: 
       objectReference: {fileID: 274888909}
+    - target: {fileID: 2848354818304641818, guid: 1ccefdfd1151db34eb6e2a29c1286ef3, type: 3}
+      propertyPath: _jumpButton
+      value: 
+      objectReference: {fileID: 256115540}
     - target: {fileID: 2848354818304641818, guid: 1ccefdfd1151db34eb6e2a29c1286ef3, type: 3}
       propertyPath: _movementJoystick
       value: 

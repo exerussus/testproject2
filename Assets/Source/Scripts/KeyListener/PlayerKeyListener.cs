@@ -11,6 +11,7 @@ namespace Source.Scripts.KeyListener
         [SerializeField] private FixedJoystick _movementJoystick;
         [SerializeField] private FixedJoystick _rotationJoystick;
         [SerializeField] private ButtonListener _runButton;
+        [SerializeField] private ButtonListener _jumpButton;
         
         protected override float SetAxisV()
         {
@@ -30,6 +31,11 @@ namespace Source.Scripts.KeyListener
         protected override float GetMouseAxisX()
         {
             return _rotationJoystick.Horizontal * _rotationSensitivity;
+        }
+
+        protected override bool GetPressedJump()
+        {
+            return _jumpButton.GetButtonDown();
         }
     }
 }
