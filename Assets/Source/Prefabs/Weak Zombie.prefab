@@ -2691,6 +2691,7 @@ GameObject:
   - component: {fileID: 5469591235933500885}
   - component: {fileID: 6629260918675189999}
   - component: {fileID: 8584091077110539999}
+  - component: {fileID: 1190547519461753683}
   m_Layer: 0
   m_Name: Weak Zombie
   m_TagString: Untagged
@@ -2705,7 +2706,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7308226224318209547}
-  m_LocalRotation: {x: -0, y: -0.7953593, z: -0, w: 0.6061382}
+  m_LocalRotation: {x: 0, y: -0.7953571, z: 0, w: 0.60614115}
   m_LocalPosition: {x: 2.98, y: -0.1500001, z: 1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2726,7 +2727,7 @@ Animator:
   m_GameObject: {fileID: 7308226224318209547}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ee6e83328237ae34ba39f0128c769bec, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4e37f696da919334694bace5732293ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 24339a25d9013cc47979dee8e9b543e1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2797,6 +2798,20 @@ MonoBehaviour:
   _rigidbodyCinematicSwitcher: {fileID: 5469591235933500885}
   _delayDestroy: 3
   _health: 5
+--- !u!114 &1190547519461753683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7308226224318209547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a4b22579344fc9a6d3ee3bd6fa629a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 20
+  _camera: {fileID: 0}
 --- !u!1 &7397268261497191760
 GameObject:
   m_ObjectHideFlags: 0
