@@ -12,6 +12,11 @@ namespace Source.Scripts.KeyListener
         [SerializeField] private FixedJoystick _rotationJoystick;
         [SerializeField] private ButtonListener _runButton;
         [SerializeField] private ButtonListener _jumpButton;
+
+        public void SetRotationSensitivity(float value)
+        {
+            if (value is >= 0.5f and <= 3f) _rotationSensitivity = value;
+        }
         
         protected override float SetAxisV()
         {

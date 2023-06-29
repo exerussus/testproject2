@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSensitivity: 1.2
-  _rotationSensitivity: 1
+  _rotationSensitivity: 1.6
   _movementJoystick: {fileID: 0}
   _rotationJoystick: {fileID: 0}
   _runButton: {fileID: 0}
@@ -1309,7 +1309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyListener: {fileID: 2848354818304641818}
-  _textMesh: {fileID: 0}
   _animator: {fileID: 8569776370010726278}
 --- !u!114 &2848354818304641793
 MonoBehaviour:
