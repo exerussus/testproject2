@@ -12,6 +12,7 @@ namespace Source.Scripts.Enemy
         [SerializeField] private Transform _playerTransform;
         [SerializeField] private int _maxEnemyCount = 10;
         [SerializeField] private float _spawnTimer = 3f;
+
         private float _timeCount = 0f;
 
         private void Update()
@@ -27,6 +28,7 @@ namespace Source.Scripts.Enemy
             }
         }
 
+        
         private void CreateEnemy()
         {
             var enemyPrefab = GetRandomEnemy();
