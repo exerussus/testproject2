@@ -2,15 +2,9 @@
 using UnityEngine;
 namespace Source.Scripts.Movements
 {
-    [RequireComponent(typeof(KeyListener.KeyListener))]
     public abstract class Movements : MonoBehaviour
     {
-        private KeyListener.KeyListener _keyListener;
-
-        private void OnValidate()
-        {
-            _keyListener = GetComponent<KeyListener.KeyListener>();
-        }
+        [SerializeField] private KeyListener.KeyListener _keyListener;
 
         private void OnEnable()
         {

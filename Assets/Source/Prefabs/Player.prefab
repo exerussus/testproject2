@@ -1308,6 +1308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2707f8ec4660b3c4da5c3a75e1846fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _keyListener: {fileID: 2848354818304641818}
+  _textMesh: {fileID: 0}
   _animator: {fileID: 8569776370010726278}
 --- !u!114 &2848354818304641793
 MonoBehaviour:

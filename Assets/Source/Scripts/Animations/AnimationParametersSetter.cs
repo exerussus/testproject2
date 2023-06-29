@@ -7,14 +7,8 @@ namespace Source.Scripts.Animations
     [RequireComponent(typeof(KeyListener.KeyListener), typeof(Animator))]
     public abstract class AnimationParametersSetter : MonoBehaviour
     {
-        private Animator _animator;
-        private KeyListener.KeyListener _playerKeyListener;
-
-        private void OnValidate()
-        {
-            _animator = GetComponent<Animator>();
-            _playerKeyListener = GetComponent<KeyListener.KeyListener>();
-        }
+        [SerializeField] private Animator _animator;
+        [SerializeField] private KeyListener.KeyListener _playerKeyListener;
 
         private void OnEnable()
         {

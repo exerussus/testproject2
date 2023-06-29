@@ -1,6 +1,7 @@
 
 using Source.Scripts.Constants;
 using Source.Scripts.Tools;
+using TMPro;
 using UnityEngine;
 
 namespace Source.Scripts.Movements
@@ -43,5 +44,6 @@ namespace Source.Scripts.Movements
         {
             _animator.SetTrigger(Parameters.Jump);
         }
+
     }
 }

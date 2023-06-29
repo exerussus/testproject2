@@ -29,12 +29,12 @@ namespace Source.Scripts.KeyListener
             _mouseAxisX = GetMouseAxisX();
             _isJumping = GetPressedJump();
             OnRotation?.Invoke(_mouseAxisX);
+            if (_isJumping) OnJump?.Invoke();
         }
 
         private void FixedUpdate()
         {
             OnAxisChange?.Invoke(_axisV, _axisH, _isSpeedModOn);
-            if (_isJumping) OnJump?.Invoke();
         }
     }
 }
